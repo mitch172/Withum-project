@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Upgrades/Rebuilds</title>
+		<link rel = "stylesheet" type = "text/css" href = "..\style.css">
+	</head>
+
+	<body>
+		<h1 align="center">Upgrade/Rebuild Form</h1>
+		<form action="..\PHP\formulas.php" method="post">
+			<table>
+				<tr>
+					<td class="title">Full name: </td>
+					<td><input required name="full_name" type="text"></input required></td>
+				</tr>
+				<tr>
+					<td class="title">Office location: </td>
+					<td><select required name="location">
+						<option value="BOS">Boston</option>
+						<option value="BRT">Braintree</option>
+						<option value="CAR">Carlsbad</option>
+						<option value="DC">DC</option>
+						<option value="EB">East Brunswick</option>
+						<option value="ENC">Encino</option>
+						<option value="IRV">Irvine</option>
+						<option value="NAS">Nashville</option>
+						<option value="NYC">New York</option>
+						<option value="ORL">Orlando</option>
+						<option value="PHI">Philadelphia</option>
+						<option value="POR">Portland</option>
+						<option value="PRI">Princeton</option>
+						<option value="PRO">Providence</option>
+						<option value="RB">Red Bank</option>
+						<option value="SB">Saddle Brooke</option>
+						<option value="SF">San Francisco</option>
+						<option value="SAR">San Ramon</option>
+						<option value="SEA">Seattle</option>
+						<option value="WHI">Whippany</option>
+						<option value="WOB">Woburn</option>
+						<option value="REM">Remote</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td class="title">Computer model: </td>
+					<td><input required name="computer" type="text"></input required></td>
+				</tr>
+				<tr>
+					<td class="title">Windows: </td>
+					<td><select required name="windows">
+						<option value="10">Windows 10</option>
+						<option value="11">Windows 11</option>
+					</select></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td><input type="submit"></td>
+					<td><input type="reset"></td>
+				</tr>
+			</table>
+			<input type="hidden" name="filename" value="UP">
+		</form>
+		<div class="home">
+			<a href="index.html">Return to home</a>
+		</div>
+	</body>
+</html>
