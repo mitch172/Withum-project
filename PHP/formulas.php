@@ -20,9 +20,16 @@
 		$title    = $_POST['title'];
 		$location = $_POST['location'];
 		$computer = $_POST['computer'];
+		$status = "";
+		$serial = "";
+		$asset = "";
+		$tech = "";
+		$qc = "";
 
 		//Insert into newHires table
-		$sql = "INSERT INTO newHires (start,name,nickname,title,location,computer) VALUES ('$start','$name','$nickname','$title','$location','$computer')";
+		$sql = "INSERT INTO newHires
+			(start,name,nickname,title,location,computer,status,serial,asset,tech,qc) VALUES
+			('$start','$name','$nickname','$title','$location','$computer','$status','$serial','$asset','$tech','$qc')";
 		if (mysqli_query($conn, $sql)) {
 			echo "New record has been added successfully !";
 		} else {
@@ -39,7 +46,9 @@
 		$windows 	= $_POST['windows'];
 
 		//Insert into upgrades table
-		$sql = "INSERT INTO upgrades (name,location,buildLocation,computer,windows) VALUES ('$name','$location','$build_location','$computer','$windows')";
+		$sql = "INSERT INTO upgrades
+			(name,location,buildLocation,computer,windows) VALUES
+			('$name','$location','$build_location','$computer','$windows')";
 		if (mysqli_query($conn, $sql)) {
 			echo "New record has been added successfully !";
 		} else {
@@ -47,4 +56,5 @@
 		}
 		mysqli_close($conn);
 	}
+	header("Location: ..\index.html");
 ?>
