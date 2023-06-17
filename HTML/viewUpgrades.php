@@ -1,3 +1,9 @@
+<?php
+	if(isset($_POST['updateUpgrades'])) {
+		
+	}
+?>
+
 <html>
 	<head>
 		<title>View Upgrades</title>
@@ -29,43 +35,71 @@
 				<td width="5%">Tech</td>
 				<td width="5%">QC</td>
 			</tr>
-			<?php
-				$servername = "localhost";
-				$username = "root";
-				$password = "";
-				$database = "withum";
+			<form action="viewUpgrades.php" method="post">
+				<?php
+					$servername = "localhost";
+					$username = "root";
+					$password = "";
+					$database = "withum";
 
-				$connection = new mysqli($servername,$username,$password,$database);
-				if($connection->connect_error) {
-					die("Connection failed: " . $connection->connect_error);
-				}
+					$connection = new mysqli($servername,$username,$password,$database);
+					if($connection->connect_error) {
+						die("Connection failed: " . $connection->connect_error);
+					}
 
-				$sql = "SELECT * from upgrades";
-				$result = $connection->query($sql);
-				if(!$result) {
-					die("Invalid query: " . $connection->error);
-				}
+					$sql = "SELECT * from upgrades";
+					$result = $connection->query($sql);
+					if(!$result) {
+						die("Invalid query: " . $connection->error);
+					}
 
-				while($row = $result->fetch_assoc()) {
-					echo "<tr>
-						<td><input type='date'>" . $row["start"] . "</td>
-						<td>" . $row["name"] . "</td>
-						<td>" . $row["location"] . "</td>
-						<td>" . $row["buildLocation"] . "</td>
-						<td>" . $row["computer"] . "</td>
-						<td>" . $row["windows"] . "</td>
-						<td>" . $row["status"] . "</td>
-						<td>" . $row["serial"] . "</td>
-						<td>" . $row["asset"] . "</td>
-						<td>" . $row["tech"] . "</td>
-						<td>" . $row["qc"] . "</td>
-					</tr>";
-				}
-			?>
+					while($row = $result->fetch_assoc()) {
+						$start = $row['start'];
+						$status = $row['status'];
+						$serial = $row['serial'];
+						$asset = $row['asset'];
+						$tech = $row['tech'];
+						$qc = $row['qc'];
+
+						echo "<tr>
+							<td><input type='date' value='$start'></td>
+							<td>" . $row["name"] . "</td>
+							<td>" . $row["location"] . "</td>
+							<td>" . $row["buildLocation"] . "</td>
+							<td>" . $row["computer"] . "</td>
+							<td>" . $row["windows"] . "</td>
+							<td><input type='text' value='$status'></td>
+							<td><input type='text' value='$serial'></td>
+							<td><input type='text' value='$asset'></td>
+							<td>
+								<select value='$tech'>
+									<option value=''></option>
+									<option value='BN'>BN</option>
+									<option value='EM'>EM</option>
+									<option value='KT'>KT</option>
+									<option value='SF'>SF</option>
+								</select>
+							</td>
+							<td>
+								<select value='$qc'>
+									<option value=''></option>
+									<option value='BN'>BN</option>
+									<option value='EM'>EM</option>
+									<option value='KT'>KT</option>
+									<option value='SF'>SF</option>
+								</select>
+							</td>
+						</tr>";
+					}
+				?>
+				<div class="update">
+					<input type="submit" name="updateUpgrades" value="Update">
+				</div>
+			</form>
 		</table>
 
 		<div class="home">
-			<a href="index.html">Return to home</a>
+			<a href="..\index.html">Return to home</a>
 		</div>
 	</body>
 </html>

@@ -1,5 +1,14 @@
 <?php
-	include_once 'db.php';
+	$servername='localhost';
+    $username='root';
+    $password='';
+    $dbname = "withum";
+    $conn=mysqli_connect($servername,$username,$password,"$dbname");
+
+	if(!$conn){
+		die('Could not Connect MySql Server:' .mysql_error());
+	}
+	
 	$class = $_POST['filename'];
 
 	// If input is a new hire
