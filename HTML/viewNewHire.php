@@ -7,6 +7,12 @@
 				width:100%;
 			}
 		</style>
+		<script>
+			function buttonCheck(id) {
+				$_POST['id'] = id;
+				window.location.href = "..\PHP\singleNewHire.php";
+			}
+		</script>
 	</head>
 
 	<body>
@@ -25,7 +31,7 @@
 				<td width="5%">Asset</td>
 				<td width="5%">Tech</td>
 				<td width="5%">QC</td>
-				<td width="5%"></td>
+				<td width="5%">Update</td>
 			</tr>
 			<form action="..\PHP\singleNewHire.php" method="post">
 				<?php
@@ -62,8 +68,11 @@
 							<td>" . $row["asset"] . "</td>
 							<td>" . $row["tech"] . "</td>
 							<td>" . $row["qc"] . "</td>
-							<input type='hidden' name='id' value='$ids[$count]'>
-							<td><input type='submit' value='Update'></td>
+							<td>
+								<button type='submit' name='id' onClick(buttonCheck($ids[$count])) value='$ids[$count]'>
+									" . "Update" . "
+								</button>
+							</td>
 						</tr>";
 
 						$count = $count + 1;

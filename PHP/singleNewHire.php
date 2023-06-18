@@ -24,50 +24,100 @@
             }
 
             while ($row = $result->fetch_assoc()) {
+                $start = $row['start'];
+                $name = $row['name'];
+                $nickname = $row['nickname'];
+                $title = $row['title'];
+                $location = $row['location'];
+                $computer = $row['computer'];
+                $status = $row['status'];
+                $serial = $row['serial'];
+                $asset = $row['asset'];
+                $tech = $row['tech'];
+                $qc = $row['qc'];
+
                 echo "<table>
                     <tr>
                         <td>Start date: </td>
-                        <td width='70%'>" . $row['start'] . "</td>
+                        <td width='70%'><input type='date' name='start' value='$start'></td>
                     </tr>
                     <tr>
                         <td>Full Name: </td>
-                        <td>" . $row['name'] . "</td>
+                        <td><input type='text' name='start' value='$name'></td>
                     </tr>
                     <tr>
                         <td>Preferred Name: </td>
-                        <td>" . $row['nickname'] . "</td>
+                        <td><input type='text' name='start' value='$nickname'></td>
                     </tr>
                     <tr>
                         <td>Job Title: </td>
-                        <td>" . $row['title'] . "</td>
+                        <td><input type='text' name='start' value='$title'></td>
                     </tr>
                     <tr>
                         <td>Office Location: </td>
-                        <td>" . $row['location'] . "</td>
+                        <td><select name='location' value='$location'>
+                                <option value='BOS'>Boston</option>
+                                <option value='BRT'>Braintree</option>
+                                <option value='CAR'>Carlsbad</option>
+                                <option value='DC'>DC</option>
+                                <option value='EB'>East Brunswick</option>
+                                <option value='ENC'>Encino</option>
+                                <option value='IRV'>Irvine</option>
+                                <option value='NAS'>Nashville</option>
+                                <option value='NYC'>New York</option>
+                                <option value='ORL'>Orlando</option>
+                                <option value='PHI'>Philadelphia</option>
+                                <option value='POR'>Portland</option>
+                                <option value='PRI'>Princeton</option>
+                                <option value='PRO'>Providence</option>
+                                <option value='RB'>Red Bank</option>
+                                <option value='SB'>Saddle Brooke</option>
+                                <option value='SF'>San Francisco</option>
+                                <option value='SAR'>San Ramon</option>
+                                <option value='SEA'>Seattle</option>
+                                <option value='WHI'>Whippany</option>
+                                <option value='WOB'>Woburn</option>
+                                <option value='REM'>Remote</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td>Computer Model: </td>
-                        <td>" . $row['computer'] . "</td>
+                        <td><input type='text' name='start' value='$computer'></td>
                     </tr>
                     <tr>
                         <td>Status: </td>
-                        <td>" . $row['status'] . "</td>
+                        <td><input type='text' name='start' value='$status'></td>
                     </tr>
                     <tr>
                         <td>S/N: </td>
-                        <td>" . $row['serial'] . "</td>
+                        <td><input type='text' name='start' value='$serial'></td>
                     </tr>
                     <tr>
                         <td>Asset: </td>
-                        <td>" . $row['asset'] . "</td>
+                        <td><input type='text' name='start' value='$asset'></td>
                     </tr>
                     <tr>
                         <td>Tech: </td>
-                        <td>" . $row['tech'] . "</td>
+                        <td><select name='location' value='$tech'>
+                                <option value='N/A'></option>
+                                <option value='EM'>EM</option>
+                                <option value='BN'>BN</option>
+                                <option value='SF'>SF</option>
+                                <option value='KT'>KT</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td>QC: </td>
-                        <td>" . $row['qc'] . "</td>
+                        <td><select name='location' value='$qc'>
+                                <option value='N/A'></option>
+                                <option value='EM'>EM</option>
+                                <option value='BN'>BN</option>
+                                <option value='SF'>SF</option>
+                                <option value='KT'>KT</option>
+                            </select>
+                        </td>
                     </tr>
                 </table>";
             }
