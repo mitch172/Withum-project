@@ -10,6 +10,7 @@
             $username = "root";
             $password = "";
             $database = "withum";
+            $id = $_POST['id'];
 
             $connection = new mysqli($servername,$username,$password,$database);
             if($connection->connect_error) {

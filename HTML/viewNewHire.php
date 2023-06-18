@@ -45,7 +45,11 @@
 						die("Invalid query: " . $connection->error);
 					}
 
+					$ids = array();
+					$count = 0;
+
 					while($row = $result->fetch_assoc()) {
+						$ids[$count] = $row['ID'];
 						echo "<tr>
 							<td>" . $row['start'] . "</td>
 							<td>" . $row['name'] . "</td>
@@ -58,8 +62,11 @@
 							<td>" . $row["asset"] . "</td>
 							<td>" . $row["tech"] . "</td>
 							<td>" . $row["qc"] . "</td>
+							<input type='hidden' name='id' value='$ids[$count]'>
 							<td><input type='submit' value='Update'></td>
 						</tr>";
+
+						$count = $count + 1;
 					}
 				?>
 			</form>
