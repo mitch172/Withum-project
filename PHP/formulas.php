@@ -31,11 +31,12 @@
 			(start,name,nickname,title,location,computer,status,serial,asset,tech,qc) VALUES
 			('$start','$name','$nickname','$title','$location','$computer','$status','$serial','$asset','$tech','$qc')";
 		if (mysqli_query($conn, $sql)) {
-			echo "New record has been added successfully !";
+			echo "<script>alert('New record has been added successfully!')</script>";
+			header("Location: ..\HTML\newHire.html");
 		} else {
 			echo "Error: " . $sql . ":-" . mysqli_error($conn);
 		}
-		mysqli_close($conn);
+		exit();
 	// If input is an upgrade or rebuild
 	} else {
 		// Initialize account and variables
@@ -56,5 +57,4 @@
 		}
 		mysqli_close($conn);
 	}
-	header("Location: ..\index.html");
 ?>
