@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Single New Hire</title>
+        <title>Single Upgrade</title>
         <link rel = "stylesheet" type = "text/css" href = "..\style.css">
     </head>
 
@@ -16,7 +16,7 @@
                 die("Connection failed: " . $connection->connect_error);
             }
 
-            $sql = "SELECT * from newHires WHERE ID='$id'";
+            $sql = "SELECT * from upgrades WHERE ID='$id'";
             $result = $connection->query($sql);
             if(!$result) {
                 die("Invalid query: " . $connection->error);
@@ -33,20 +33,20 @@
                         <td>" . $row['name'] . "</td>
                     </tr>
                     <tr>
-                        <td>Preferred Name: </td>
-                        <td>" . $row['nickname'] . "</td>
-                    </tr>
-                    <tr>
-                        <td>Job Title: </td>
-                        <td>" . $row['title'] . "</td>
-                    </tr>
-                    <tr>
                         <td>Office Location: </td>
                         <td>" . $row['location'] . "</td>
                     </tr>
                     <tr>
+                        <td>Status: </td>
+                        <td>" . $row['buildLocation'] . "</td>
+                    </tr>
+                    <tr>
                         <td>Computer Model: </td>
                         <td>" . $row['computer'] . "</td>
+                    </tr>
+                    <tr>
+                        <td>Status: </td>
+                        <td>" . $row['windows'] . "</td>
                     </tr>
                     <tr>
                         <td>Status: </td>

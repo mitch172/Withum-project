@@ -14,9 +14,9 @@
 		<hr>
 		<table>
 			<tr>
-				<td width="10%">Start Date</td>
+				<td width="15%">Start Date</td>
 				<td width="15%">Full Name</td>
-				<td width="15%">Preferred Name</td>
+				<td width="10%">Preferred Name</td>
 				<td width="10%">Job Title</td>
 				<td width="10%">Office Location</td>
 				<td width="10%">Computer Model</td>
@@ -46,10 +46,7 @@
 					}
 
 					while($row = $result->fetch_assoc()) {
-						$id = $row['ID'];
-						
 						echo "<tr>
-							<input type='hidden' name ='id' value='$id'>
 							<td>" . $row['start'] . "</td>
 							<td>" . $row['name'] . "</td>
 							<td>" . $row["nickname"] . "</td>
