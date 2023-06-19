@@ -32,7 +32,7 @@
 			('$start','$name','$nickname','$title','$location','$computer','$status','$serial','$asset','$tech','$qc')";
 		if (mysqli_query($conn, $sql)) {
 			echo "<script>alert('New record has been added successfully!')</script>";
-			header("Location: ..\HTML\newHire.html");
+			header("..\HTML\newHire.html");
 		} else {
 			echo "Error: " . $sql . ":-" . mysqli_error($conn);
 		}
