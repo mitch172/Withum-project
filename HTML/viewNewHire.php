@@ -1,24 +1,46 @@
 <html>
 	<head>
 		<title>View New Hires</title>
-		<link rel = "stylesheet" type = "text/css" href = "..\style.css">
 		<style>
+			body{
+				background-color:beige;
+				font-family:"Arial";
+				font-size:14px;
+			}
+			select{
+				width:100%;
+			}
+			input{
+				width:100%;
+			}
+			td.title{
+				width:15%;
+			}
+			a{
+				text-align:center;
+				display:inline-block;
+				text-decoration:none;
+				background-color:#eee;
+				border:2px outset #ccc;
+				color:black;
+				margin:5px;
+				width:100%;
+			}
 			table{
 				width:100%;
 			}
-		</style>
-		<script>
-			function buttonCheck(id) {
-				$_POST['id'] = id;
-				window.location.href = "..\PHP\singleNewHire.php";
+			a.header{
+				position:absolute;
+				top:0px;
+				left:0px;
+				right:90%;
+				width:10%;
 			}
-		</script>
+		</style>
 	</head>
 
 	<body>
-		<div class="home">
-			<a href="..\index.html">Return to home</a>
-		</div>
+		<a class="header" href="..\index.html">Return to home</a>
 		<h1 align="center">New Hires List</h1>
 		<hr>
 		<table>
@@ -34,7 +56,7 @@
 				<td width="5%">Asset</td>
 				<td width="5%">Tech</td>
 				<td width="5%">QC</td>
-				<td width="5%">Update</td>
+				<td width="5%"></td>
 			</tr>
 			<form action="..\PHP\singleNewHire.php" method="post">
 				<?php

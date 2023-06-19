@@ -33,9 +33,9 @@ a{
 }
 div.home{
 	position:absolute;
-	bottom:5px;
-	left:40%;
-	right:40%;
+	top:0px;
+	left:0px;
+	right:90%;
 }
 div.update{
 	position:absolute;
