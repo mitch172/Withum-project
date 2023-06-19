@@ -16,6 +16,9 @@
 	</head>
 
 	<body>
+		<div class="home">
+			<a href="..\index.html">Return to home</a>
+		</div>
 		<h1 align="center">New Hires List</h1>
 		<hr>
 		<table>
@@ -80,9 +83,5 @@
 				?>
 			</form>
 		</table>
-
-		<div class="home">
-			<a href="..\index.html">Return to home</a>
-		</div>
 	</body>
 </html>
