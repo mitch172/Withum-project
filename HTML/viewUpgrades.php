@@ -98,6 +98,11 @@
 									" . "Update" . "
 								</button>
 							</td>
+							<td>
+								<button type='submit' name='delete' onClick(buttonCheck($ids[$count])) value='$ids[$count]'>
+									" . "Delete" . "
+								</button>
+							</td>
 						</tr>";
 
 						$count = $count + 1;
