@@ -28,8 +28,7 @@
         WHERE id='$id'";
     if (mysqli_query($conn, $sql)) {
         $url = "http://withumbuildproject.com/HTML/viewUpgrades.php";
-        echo "<script>alert('Record has been updated successfully!')</script>
-            <meta http-equiv='Refresh' content='0; url=$url' />";
+        echo "<script>alert('Record has been updated successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
     } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }
