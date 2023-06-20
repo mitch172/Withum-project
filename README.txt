@@ -3,6 +3,7 @@ Objective: To develop a single website that HR can use to enter the details of a
 
 Current Features:
 - index.html which opens on domain request. Lists page options for New Hires, Upgrades, Viewing new hires/upgrades, and Complete builds
+	- Has buttons labelled with builder's initials. These buttons will lead to pages that display all builds that the initials were marked as being the builder or qc'er
 - newHire.html that can enter new hire information and submit data to SQL table newHires
 - upgrade.html that can enter upgrade/rebuild information and submit data to SQL table upgrades
 - Two SQL tables, newHires and upgrades, that organize entries of two types
