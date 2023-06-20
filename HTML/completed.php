@@ -47,54 +47,82 @@
 	<body>
 		<h1 align="center">Completed Builds</h1>
 		<hr>
-		<table>
+		<table width="100%">
 			<tr>
-				<td width="10%">Date</td>
-				<td width="40%">Name</td>
-				<td width="25%">Tech</td>
-				<td width="25%">QC</td>
+				<td width="50%"><table width="100%">
+					<tr>
+						<td width="100%">New Hires</td>
+					<tr>
+						<td width="10%">Date</td>
+						<td width="40%">Name</td>
+						<td width="25%">Tech</td>
+						<td width="25%">QC</td>
+					</tr>
+					<?php
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$database = "withum";
+			
+						$connection = new mysqli($servername,$username,$password,$database);
+						if($connection->connect_error) {
+							die("Connection failed: " . $connection->connect_error);
+						}
+			
+						$sql = "SELECT * from newHires ORDER BY start ASC WHERE status='Complete'";
+						$result = $connection->query($sql);
+						if(!$result) {
+							die("Invalid query: " . $connection->error);
+						}
+			
+						while($row = $result->fetch_assoc()) {
+							echo "<tr>
+								<td>" . $row['start'] . "</td>
+								<td>" . $row['name'] . "</td>
+								<td>" . $row['tech'] . "</td>
+								<td>" . $row['qc'] . "</td>
+							</tr>";
+						}
+					?>
+				</table></td>
+				
+				<td width="50%"><table width="100%">
+					<tr>
+						<td width="100%">Upgrades/Rebuilds</td>
+					<tr>
+						<td width="10%">Date</td>
+						<td width="40%">Name</td>
+						<td width="25%">Tech</td>
+						<td width="25%">QC</td>
+					</tr>
+					<?php
+						$servername = "localhost";
+						$username = "root";
+						$password = "";
+						$database = "withum";
+			
+						$connection = new mysqli($servername,$username,$password,$database);
+						if($connection->connect_error) {
+							die("Connection failed: " . $connection->connect_error);
+						}
+			
+						$sql = "SELECT * from upgrades ORDER BY start ASC WHERE status='Complete'";
+						$result = $connection->query($sql);
+						if(!$result) {
+							die("Invalid query: " . $connection->error);
+						}
+		
+						while($row = $result->fetch_assoc()) {
+							echo "<tr>
+								<td>" . $row['start'] . "</td>
+								<td>" . $row['name'] . "</td>
+								<td>" . $row['tech'] . "</td>
+								<td>" . $row['qc'] . "</td>
+							</tr>";
+						}
+					?>
+				</table></td>
 			</tr>
-			<?php
-				$servername = "localhost";
-				$username = "root";
-				$password = "";
-				$database = "withum";
-	
-				$connection = new mysqli($servername,$username,$password,$database);
-				if($connection->connect_error) {
-					die("Connection failed: " . $connection->connect_error);
-				}
-	
-				$sql = "SELECT * from newHires ORDER BY start ASC WHERE status='Complete'";
-				$result = $connection->query($sql);
-				if(!$result) {
-					die("Invalid query: " . $connection->error);
-				}
-	
-				while($row = $result->fetch_assoc()) {
-					echo "<tr>
-						<td>" . $row['start'] . "</td>
-						<td>" . $row['name'] . "</td>
-						<td>" . $row['tech'] . "</td>
-						<td>" . $row['qc'] . "</td>
-					</tr>";
-				}
-
-				$sql = "SELECT * from upgrades ORDER BY start ASC WHERE status='Complete'";
-				$result = $connection->query($sql);
-				if(!$result) {
-					die("Invalid query: " . $connection->error);
-				}
-
-				while($row = $result->fetch_assoc()) {
-					echo "<tr>
-						<td>" . $row['start'] . "</td>
-						<td>" . $row['name'] . "</td>
-						<td>" . $row['tech'] . "</td>
-						<td>" . $row['qc'] . "</td>
-					</tr>";
-				}
-			?>
 		</table>
 		<div class="home">
 			<a href="..\index.html">Return to home</a>
