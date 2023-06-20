@@ -88,28 +88,28 @@
                             <tr>
                                 <td>Office Location: </td>
                                 <td><select name='location' value='$location'>
-                                        <option value='BOS'>Boston</option>
-                                        <option value='BRT'>Braintree</option>
-                                        <option value='CAR'>Carlsbad</option>
-                                        <option value='DC'>DC</option>
-                                        <option value='EB'>East Brunswick</option>
-                                        <option value='ENC'>Encino</option>
-                                        <option value='IRV'>Irvine</option>
-                                        <option value='NAS'>Nashville</option>
-                                        <option value='NYC'>New York</option>
-                                        <option value='ORL'>Orlando</option>
-                                        <option value='PHI'>Philadelphia</option>
-                                        <option value='POR'>Portland</option>
-                                        <option value='PRI'>Princeton</option>
-                                        <option value='PRO'>Providence</option>
-                                        <option value='RB'>Red Bank</option>
-                                        <option value='SB'>Saddle Brooke</option>
-                                        <option value='SF'>San Francisco</option>
-                                        <option value='SAR'>San Ramon</option>
-                                        <option value='SEA'>Seattle</option>
-                                        <option value='WHI'>Whippany</option>
-                                        <option value='WOB'>Woburn</option>
-                                        <option value='REM'>Remote</option>
+                                        <option value='BOS' <?php if ($row[location] == 'BOS') echo ' selected="selected"'>>Boston</option>
+                                        <option value='BRT' <?php if ($row[location] == 'BRT') echo ' selected="selected"'>>Braintree</option>
+                                        <option value='CAR' <?php if ($row[location] == 'CAR') echo ' selected="selected"'>>Carlsbad</option>
+                                        <option value='DC' <?php if ($row[location] == 'DC') echo ' selected="selected"'>>DC</option>
+                                        <option value='EB' <?php if ($row[location] == 'EB') echo ' selected="selected"'>>East Brunswick</option>
+                                        <option value='ENC' <?php if ($row[location] == 'ENC') echo ' selected="selected"'>>Encino</option>
+                                        <option value='IRV' <?php if ($row[location] == 'IRV') echo ' selected="selected"'>>Irvine</option>
+                                        <option value='NAS' <?php if ($row[location] == 'NAS') echo ' selected="selected"'>>Nashville</option>
+                                        <option value='NYC' <?php if ($row[location] == 'NYC') echo ' selected="selected"'>>New York</option>
+                                        <option value='ORL' <?php if ($row[location] == 'ORL') echo ' selected="selected"'>>Orlando</option>
+                                        <option value='PHI' <?php if ($row[location] == 'PHI') echo ' selected="selected"'>>Philadelphia</option>
+                                        <option value='POR' <?php if ($row[location] == 'POR') echo ' selected="selected"'>>Portland</option>
+                                        <option value='PRI' <?php if ($row[location] == 'PRI') echo ' selected="selected"'>>Princeton</option>
+                                        <option value='PRO' <?php if ($row[location] == 'PRO') echo ' selected="selected"'>>Providence</option>
+                                        <option value='RB' <?php if ($row[location] == 'RB') echo ' selected="selected"'>>Red Bank</option>
+                                        <option value='SB' <?php if ($row[location] == 'SB') echo ' selected="selected"'>>Saddle Brooke</option>
+                                        <option value='SF' <?php if ($row[location] == 'SF') echo ' selected="selected"'>>San Francisco</option>
+                                        <option value='SAR' <?php if ($row[location] == 'SAR') echo ' selected="selected"'>>San Ramon</option>
+                                        <option value='SEA' <?php if ($row[location] == 'SEA') echo ' selected="selected"'>>Seattle</option>
+                                        <option value='WHI' <?php if ($row[location] == 'WHI') echo ' selected="selected"'>>Whippany</option>
+                                        <option value='WOB' <?php if ($row[location] == 'WOB') echo ' selected="selected"'>>Woburn</option>
+                                        <option value='REM' <?php if ($row[location] == 'REM') echo ' selected="selected"'>>Remote</option>
                                     </select>
                                 </td>
                             </tr>
@@ -132,22 +132,22 @@
                             <tr>
                                 <td>Tech: </td>
                                 <td><select name='tech' value='$tech'>
-                                        <option value=''></option>
-                                        <option value='EM'>EM</option>
-                                        <option value='BN'>BN</option>
-                                        <option value='SF'>SF</option>
-                                        <option value='KT'>KT</option>
+                                        <option value='' <?php if ($row[tech] == '') echo ' selected="selected"'></option>
+                                        <option value='EM' <?php if ($row[tech] == 'EM') echo ' selected="selected"'>>EM</option>
+                                        <option value='BN' <?php if ($row[tech] == 'BN') echo ' selected="selected"'>>BN</option>
+                                        <option value='SF' <?php if ($row[tech] == 'SF') echo ' selected="selected"'>>SF</option>
+                                        <option value='KT' <?php if ($row[tech] == 'KT') echo ' selected="selected"'>>KT</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>QC: </td>
                                 <td><select name='qc' value='$qc'>
-                                        <option value=''></option>
-                                        <option value='EM'>EM</option>
-                                        <option value='BN'>BN</option>
-                                        <option value='SF'>SF</option>
-                                        <option value='KT'>KT</option>
+                                        <option value='' <?php if ($row[tech] == '') echo ' selected="selected"'>></option>
+                                        <option value='EM' <?php if ($row[tech] == 'EM') echo ' selected="selected"'>>EM</option>
+                                        <option value='BN' <?php if ($row[tech] == 'BN') echo ' selected="selected"'>>BN</option>
+                                        <option value='SF' <?php if ($row[tech] == 'SF') echo ' selected="selected"'>>SF</option>
+                                        <option value='KT' <?php if ($row[tech] == 'KT') echo ' selected="selected"'>>KT</option>
                                     </select>
                                 </td>
                             </tr>
