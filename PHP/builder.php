@@ -1,6 +1,18 @@
 <html>
 	<head>
 		<title>Builder's Work</title>
+		<style>
+			body{
+				background-color:beige;
+				font-family:"Arial";
+			}
+			table{
+				width:100%;
+				margin-left:auto;
+				margin-right:auto;
+				font-size:25px;
+			}
+		</style>
 	</head>
 	
 	<body>
