@@ -2,8 +2,9 @@ Author:     Evan Mitchell
 Objective:  To develope a single website that HR can use to enter the details of a new hire and for those details to be displayed on a seperate webpage that IT can view.
 
 Current Features:
-- Front end page that can enter new hire information and submit data to SQL table newHires
-- Front end page that can enter upgrade/rebuild information and submit data to SQL table upgrades
+- index.html which opens on domain request. Lists page options for New Hires, Upgrades, Viewing new hires/upgrades, and Complete builds
+- newHire.html that can enter new hire information and submit data to SQL table newHires
+- upgrade.html that can enter upgrade/rebuild information and submit data to SQL table upgrades
 - Two SQL tables, newHires and upgrades, that organize entries of two types
 - Two display pages, viewNewHires and viewUpgrades, which display all entries in their respective tables to IT
             - Both pages can display all entries in tables, an update button, and a delete button
