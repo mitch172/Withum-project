@@ -70,7 +70,7 @@
 						die("Connection failed: " . $connection->connect_error);
 					}
 
-					$sql = "SELECT * from upgrades ORDER BY start ASC";
+					$sql = "SELECT * from upgrades ORDER BY start ASC WHERE status!='Complete'";
 					$result = $connection->query($sql);
 					if(!$result) {
 						die("Invalid query: " . $connection->error);
