@@ -27,7 +27,7 @@
         SET start='$start', name='$name', location='$location', buildLocation='$buildLocation', computer='$computer', windows='$windows', status='$status', serial='$serial', asset='$asset', tech='$tech', qc='$qc'
         WHERE id='$id'";
     if (mysqli_query($conn, $sql)) {
-        $url = "http://withumbuildproject.com/HTML/viewUpgrades.php";
+        $url = "http://withumbuildproject.com/PHP/viewUpgrades.php";
         echo "<script>alert('Record has been updated successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
     } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

@@ -27,7 +27,7 @@
         SET start='$start', name='$name', nickname='$nickname', title='$title', location='$location', computer='$computer', status='$status', serial='$serial', asset='$asset', tech='$tech', qc='$qc'
         WHERE id='$id'";
     if (mysqli_query($conn, $sql)) {
-        $url = "http://withumbuildproject.com/HTML/viewNewHire.php";
+        $url = "http://withumbuildproject.com/PHP/viewNewHire.php";
         echo "<script>alert('Record has been updated successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
     } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
