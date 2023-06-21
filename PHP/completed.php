@@ -6,12 +6,6 @@
 				background-color:beige;
 				font-family:"Arial";
 			}
-			table{
-				width:75%;
-				margin-left:auto;
-				margin-right:auto;
-				font-size:25px;
-			}
 			select{
 				width:100%;
 			}
@@ -41,6 +35,13 @@
 				left:40%;
 				right:40%;
 			}
+			a.header{
+				position:absolute;
+				top:0px;
+				left:0px;
+				right:90%;
+				width:10%;
+			}
 		</style>
 	</head>
 
@@ -69,7 +70,7 @@
 							die("Connection failed: " . $connection->connect_error);
 						}
 			
-						$sql = "SELECT * from newHires ORDER BY start ASC WHERE status='Complete'";
+						$sql = "SELECT * from newHires WHERE status='Complete' ORDER BY start ASC";
 						$result = $connection->query($sql);
 						if(!$result) {
 							die("Invalid query: " . $connection->error);
@@ -106,7 +107,7 @@
 							die("Connection failed: " . $connection->connect_error);
 						}
 			
-						$sql = "SELECT * from upgrades ORDER BY start ASC WHERE status='Complete'";
+						$sql = "SELECT * from upgrades WHERE status='Complete' ORDER BY start ASC";
 						$result = $connection->query($sql);
 						if(!$result) {
 							die("Invalid query: " . $connection->error);
@@ -124,8 +125,6 @@
 				</table></td>
 			</tr>
 		</table>
-		<div class="home">
-			<a href="..\index.html">Return to home</a>
-		</div>
+		<a class="header" href="..\index.html">Return to home</a>
 	</body>
 </html>
