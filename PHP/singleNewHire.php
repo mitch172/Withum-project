@@ -149,11 +149,8 @@
                                     </select>
                                 </td>
                             </tr>
-            <?php
-                        echo "
                             <tr>
-                                <td>QC: </td>";
-            ?>
+                                <td>QC: </td>
                                 <td><select name='qc' value='$qc'>
                                         <option value='EM' <?php if($qc == 'EM') echo "selected:selected"; ?>>EM</option>
                                         <option value='BN' <?php if($qc == 'BN') echo "selected:selected"; ?>>BN</option>
@@ -162,10 +159,8 @@
                                     </select>
                                 </td>
                             </tr>
-            <?php
-                        echo "
                         </table>
-                        <input class='submit' type='submit' value='Process'>";
+                        <input class='submit' type='submit' value='Process'>
                     }
                 }
             ?>
