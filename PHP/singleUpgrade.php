@@ -86,7 +86,7 @@
                                 <td>Office Location: </td>";
             ?>
                                 <td>
-                                    <select name='location' value='$location'>
+                                    <select name='location'>
                                         <option value='BOS' <?php if($location == 'BOS') echo "selected:selected"; ?>>Boston</option>
                                         <option value='BRT' <?php if($location == 'BRT') echo "selected:selected"; ?>>Braintree</option>
                                         <option value='CAR' <?php if($location == 'CAR') echo "selected:selected"; ?>>Carlsbad</option>
@@ -115,7 +115,7 @@
                             <tr>
                                 <td>Build Location: </td>
                                 <td>
-                                    <select name='buildLocation' value='$buildLocation'>
+                                    <select name='buildLocation'>
                                         <option value='BOS' <?php if($buildLocation == 'BOS') echo "selected:selected"; ?>>Boston</option>
                                         <option value='BRT' <?php if($buildLocation == 'BRT') echo "selected:selected"; ?>>Braintree</option>
                                         <option value='CAR' <?php if($buildLocation == 'CAR') echo "selected:selected"; ?>>Carlsbad</option>
@@ -166,7 +166,7 @@
                             <tr>
                                 <td>Tech: </td>";
             ?>
-                                <td><select name='tech' value='$tech'>
+                                <td><select name='tech'>
                                         <option value='EM' <?php if($tech == 'EM') echo "selected:selected"; ?>>EM</option>
                                         <option value='BN' <?php if($tech == 'BN') echo "selected:selected"; ?>>BN</option>
                                         <option value='SF' <?php if($tech == 'SF') echo "selected:selected"; ?>>SF</option>
@@ -176,7 +176,7 @@
                             </tr>
                             <tr>
                                 <td>QC: </td>
-                                <td><select name='qc' value='$qc'>
+                                <td><select name='qc'>
                                         <option value='EM' <?php if($qc == 'EM') echo "selected:selected"; ?>>EM</option>
                                         <option value='BN' <?php if($qc == 'BN') echo "selected:selected"; ?>>BN</option>
                                         <option value='SF' <?php if($qc == 'SF') echo "selected:selected"; ?>>SF</option>
