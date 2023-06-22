@@ -84,35 +84,63 @@
                             </tr>
                             <tr>
                                 <td>Office Location: </td>
-                                <td><select name='location' value='$location'>
-                                        <option value='BOS' <?php if(strcmp($location,'BOS') !== 0) echo 'selected=$selected'?>Boston</option>
-                                        <option value='BRT' <?php if(strcmp($location,'BRT') !== 0) echo 'selected=$selected'?>Braintree</option>
-                                        <option value='CAR' <?php if(strcmp($location,'CAR') !== 0) echo 'selected=$selected'?>Carlsbad</option>
-                                        <option value='DC' <?php if(strcmp($location,'DC') !== 0) echo 'selected=$selected'?>DC</option>
-                                        <option value='EB' <?php if(strcmp($location,'EB') !== 0) echo 'selected=$selected'?>East Brunswick</option>
-                                        <option value='ENC' <?php if(strcmp($location,'ENC') !== 0) echo 'selected=$selected'?>Encino</option>
-                                        <option value='IRV' <?php if(strcmp($location,'IRV') !== 0) echo 'selected=$selected'?>Irvine</option>
-                                        <option value='NAS' <?php if(strcmp($location,'NAS') !== 0) echo 'selected=$selected'?>Nashville</option>
-                                        <option value='NYC' <?php if(strcmp($location,'NYC') !== 0) echo 'selected=$selected'?>New York</option>
-                                        <option value='ORL' <?php if(strcmp($location,'ORL') !== 0) echo 'selected=$selected'?>Orlando</option>
-                                        <option value='PHI' <?php if(strcmp($location,'PHI') !== 0) echo 'selected=$selected'?>Philadelphia</option>
-                                        <option value='POR' <?php if(strcmp($location,'POR') !== 0) echo 'selected=$selected'?>Portland</option>
-                                        <option value='PRI' <?php if(strcmp($location,'PRI') !== 0) echo 'selected=$selected'?>Princeton</option>
-                                        <option value='PRO' <?php if(strcmp($location,'PRO') !== 0) echo 'selected=$selected'?>Providence</option>
-                                        <option value='RB' <?php if(strcmp($location,'RB') !== 0) echo 'selected=$selected'?>Red Bank</option>
-                                        <option value='SB' <?php if(strcmp($location,'SB') !== 0) echo 'selected=$selected'?>Saddle Brooke</option>
-                                        <option value='SF' <?php if(strcmp($location,'SF') !== 0) echo 'selected=$selected'?>San Francisco</option>
-                                        <option value='SAR' <?php if(strcmp($location,'SAR') !== 0) echo 'selected=$selected'?>San Ramon</option>
-                                        <option value='SEA' <?php if(strcmp($location,'SEA') !== 0) echo 'selected=$selected'?>Seattle</option>
-                                        <option value='WHI' <?php if(strcmp($location,'WHI') !== 0) echo 'selected=$selected'?>Whippany</option>
-                                        <option value='WOB' <?php if(strcmp($location,'WOB') !== 0) echo 'selected=$selected'?>Woburn</option>
-                                        <option value='REM' <?php if(strcmp($location,'REM') !== 0) echo 'selected=$selected'?>Remote</option>
+                                <td>
+                                    <select name='location' value='$location'>
+                                        <option value='' selected hidden></option>
+                                        <option value='BOS'>Boston</option>
+                                        <option value='BRT'>Braintree</option>
+                                        <option value='CAR'>Carlsbad</option>
+                                        <option value='DC'>DC</option>
+                                        <option value='EB'>East Brunswick</option>
+                                        <option value='ENC'>Encino</option>
+                                        <option value='IRV'>Irvine</option>
+                                        <option value='NAS'>Nashville</option>
+                                        <option value='NYC'>New York</option>
+                                        <option value='ORL'>Orlando</option>
+                                        <option value='PHI'>Philadelphia</option>
+                                        <option value='POR'>Portland</option>
+                                        <option value='PRI'>Princeton</option>
+                                        <option value='PRO'>Providence</option>
+                                        <option value='RB'>Red Bank</option>
+                                        <option value='SB'>Saddle Brooke</option>
+                                        <option value='SF'>San Francisco</option>
+                                        <option value='SAR'>San Ramon</option>
+                                        <option value='SEA'>Seattle</option>
+                                        <option value='WHI'>Whippany</option>
+                                        <option value='WOB'>Woburn</option>
+                                        <option value='REM'>Remote</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Office Location: </td>
-                                <td><input type='text' name='buildLocation' value='$buildLocation'></td>
+                                <td>Build Location: </td>
+                                <td>
+                                    <select name='buildLocation' value='$buildLocation'>
+                                        <option value='' selected hidden></option>
+                                        <option value='BOS'>Boston</option>
+                                        <option value='BRT'>Braintree</option>
+                                        <option value='CAR'>Carlsbad</option>
+                                        <option value='DC'>DC</option>
+                                        <option value='EB'>East Brunswick</option>
+                                        <option value='ENC'>Encino</option>
+                                        <option value='IRV'>Irvine</option>
+                                        <option value='NAS'>Nashville</option>
+                                        <option value='NYC'>New York</option>
+                                        <option value='ORL'>Orlando</option>
+                                        <option value='PHI'>Philadelphia</option>
+                                        <option value='POR'>Portland</option>
+                                        <option value='PRI'>Princeton</option>
+                                        <option value='PRO'>Providence</option>
+                                        <option value='RB'>Red Bank</option>
+                                        <option value='SB'>Saddle Brooke</option>
+                                        <option value='SF'>San Francisco</option>
+                                        <option value='SAR'>San Ramon</option>
+                                        <option value='SEA'>Seattle</option>
+                                        <option value='WHI'>Whippany</option>
+                                        <option value='WOB'>Woburn</option>
+                                        <option value='REM'>Remote</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Computer Model: </td>
@@ -137,22 +165,22 @@
                             <tr>
                                 <td>Tech: </td>
                                 <td><select name='tech' value='$tech'>
-                                        <option value='' <?php echo $tech == ''?'selected':'';?></option>
-                                        <option value='EM' <?php echo $tech == 'EM'?'selected':'';?>EM</option>
-                                        <option value='BN' <?php echo $tech == 'BN'?'selected':'';?>BN</option>
-                                        <option value='SF' <?php echo $tech == 'SF'?'selected':'';?>SF</option>
-                                        <option value='KT' <?php echo $tech == 'KT'?'selected':'';?>KT</option>
+                                        <option value='' selected hidden></option>
+                                        <option value='EM'>EM</option>
+                                        <option value='BN'>BN</option>
+                                        <option value='SF'>SF</option>
+                                        <option value='KT'>KT</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>QC: </td>
                                 <td><select name='qc' value='$qc'>
-                                        <option value='' <?php echo $qc == ''?'selected':'';?></option>
-                                        <option value='EM' <?php echo strcmp($qc == 'EM')?'selected':'';?>EM</option>
-                                        <option value='BN' <?php echo $qc == 'BN'?'selected':'';?>BN</option>
-                                        <option value='SF' <?php echo $qc == 'SF'?'selected':'';?>SF</option>
-                                        <option value='KT' <?php echo $qc == 'KT'?'selected':'';?>KT</option>
+                                        <option value='' selected hidden></option>
+                                        <option value='EM'>EM</option>
+                                        <option value='BN'>BN</option>
+                                        <option value='SF'>SF</option>
+                                        <option value='KT'>KT</option>
                                     </select>
                                 </td>
                             </tr>

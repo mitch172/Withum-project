@@ -3,7 +3,7 @@
     $start = $_GET['start'];
     $name = $_GET['name'];
     $location = $_GET['location'];
-    $buildLocation = $row['buildLocation'];
+    $buildLocation = $_GET['buildLocation'];
     $computer = $_GET['computer'];
     $windows = $_GET['windows'];
     $status = $_GET['status'];

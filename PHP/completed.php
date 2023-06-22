@@ -52,10 +52,10 @@
 			<tr>
 				<td width="50%"><table width="100%">
 					<tr>
-						<td width="100%">New Hires</td>
+						<td width="100%" align="center" colspan="4">New Hires</td>
 					<tr>
-						<td width="10%">Date</td>
-						<td width="40%">Name</td>
+						<td width="25%">Date</td>
+						<td width="25%">Name</td>
 						<td width="25%">Tech</td>
 						<td width="25%">QC</td>
 					</tr>
@@ -89,10 +89,10 @@
 				
 				<td width="50%"><table width="100%">
 					<tr>
-						<td width="100%">Upgrades/Rebuilds</td>
+						<td width="100%" align="center" colspan="4">Upgrades/Rebuilds</td>
 					<tr>
-						<td width="10%">Date</td>
-						<td width="40%">Name</td>
+						<td width="25%">Date</td>
+						<td width="25%">Name</td>
 						<td width="25%">Tech</td>
 						<td width="25%">QC</td>
 					</tr>
