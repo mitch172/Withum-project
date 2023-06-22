@@ -1,33 +1,33 @@
 <html>
-    <head>
-        <title>Single Upgrade</title>
-        <style>
-            body{
-                background-color:beige;
-                font-family:"Arial";
-                font-size:14px;
-            }
-            table{
-                width:75%;
-                margin-left:auto;
-                margin-right:auto;
-            }
-            select{
-                width:100%;
-            }
-            input{
-                width:100%;
-            }
-            td.title{
-                width:15%;
-            }
-            input.submit{
-                position:absolute;
-                left:45%;
-                right:45%;
-                width:10%;
-            }
-        </style>
+	<head>
+		<title>Single Upgrade</title>
+		<style>
+			body{
+				background-color:beige;
+				font-family:"Arial";
+				font-size:14px;
+			}
+			table{
+				width:75%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			select{
+				width:100%;
+			}
+			input{
+				width:100%;
+			}
+			td.title{
+				width:15%;
+			}
+			input.submit{
+				position:absolute;
+				left:45%;
+				right:45%;
+				width:10%;
+			}
+		</style>
     </head>
 
     <body>
