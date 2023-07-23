@@ -31,7 +31,7 @@
     </head>
 
 	<body>
-		<form action="updateUpgrade.php" method="get">
+		<form action="updateEntry.php" method="get">
 		    <?php
 				//Outline SQL login
 				$servername = "localhost";
@@ -50,7 +50,7 @@
 					$delete = $_POST['delete'];
 					mysqli_query($connection,"DELETE FROM upgrades WHERE id='$delete'");
 					mysqli_close($connection);
-					$url = "http://withumbuildproject.com/PHP/viewUpgrades.php";
+					$url = "http://withumbuildproject.com/View Pages/viewUpgrades.php";
 					echo "<script>alert('Record has been deleted successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
 				
 				//Else, process entry into update page
@@ -81,6 +81,7 @@
 						echo "
 							<table>
 								<input type='hidden' name='id' value='$id'>
+								<input type='hidden' name='class' value='UP'>
 								<tr>
 									<td class='title'>Start date: </td>
 									<td width='70%'><input type='date' name='start' value='$start'></td>

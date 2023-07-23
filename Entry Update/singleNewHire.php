@@ -31,7 +31,7 @@
 	</head>
 
 	<body>
-		<form action="updateNewHire.php" method="get">
+		<form action="updateEntry.php" method="get">
 			<?php
 				$servername = "localhost";
 				$username = "root";
@@ -47,7 +47,7 @@
 					$delete = $_POST['delete'];
 					mysqli_query($connection,"DELETE FROM newHires WHERE id='$delete'");
 					mysqli_close($connection);
-					$url = "http://withumbuildproject.com/PHP/viewNewHire.php";
+					$url = "http://withumbuildproject.com/View Pages/viewNewHire.php";
 					echo "<script>alert('Record has been deleted successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
 				} else {
 					$id = $_POST['id'];
@@ -76,6 +76,7 @@
 					echo "
 						<table>
 							<input type='hidden' name='id' value='$id'>
+							<input type='hidden' name='class' value='NH'>
 							<tr>
 								<td class='title'>Start date: </td>
 								<td width='70%'><input type='date' name='start' value='$start'></td>

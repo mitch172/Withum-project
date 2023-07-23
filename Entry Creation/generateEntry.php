@@ -30,7 +30,7 @@
 		$sql = "INSERT INTO newHires (start,name,nickname,title,location,computer,status,serial,asset,tech,qc) VALUES
 			('$start','$name','$nickname','$title','$location','$computer','$status','$serial','$asset','$tech','$qc')";
 		if (mysqli_query($conn, $sql)) {
-			$url = "http://withumbuildproject.com/HTML/newHire.html";
+			$url = "http://withumbuildproject.com/Entry Creation/newHire.html";
 			echo "<script>alert('New record has been added successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
 		} else {
 			echo "Error: " . $sql . ":-" . mysqli_error($conn);
@@ -53,7 +53,7 @@
 		$sql = "INSERT INTO upgrades (name,location,buildLocation,computer,windows) VALUES
 			('$name','$location','$build_location','$computer','$windows')";
 		if (mysqli_query($conn, $sql)) {
-			$url = "http://withumbuildproject.com/HTML/upgrades.html";
+			$url = "http://withumbuildproject.com/Entry Creation/upgrades.html";
 			echo "<script>alert('New record has been added successfully!')</script><meta http-equiv='Refresh' content='0; url=$url' />";
 		} else {
 			echo "Error: " . $sql . ":-" . mysqli_error($conn);

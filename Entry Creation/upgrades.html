@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>New Hires</title>
+		<title>Upgrades/Rebuilds</title>
 		<style>
 			body{
 				background-color:beige;
@@ -45,24 +45,12 @@
 	</head>
 
 	<body>
-		<h1 align="center">New Hire Form</h1>
-		<form action="..\PHP\formulas.php" method="post">
+		<h1 align="center">Upgrade/Rebuild Form</h1>
+		<form action="generateEntry.php" method="post">
 			<table>
-				<tr>
-					<td class="title">Start date: </td>
-					<td><input required name="start_date" type="date"></input required></td>
-				</tr>
 				<tr>
 					<td class="title">Full name: </td>
 					<td><input required name="full_name" type="text"></input required></td>
-				</tr>
-				<tr>
-					<td class="title">Preferred name: </td>
-					<td><input name="nickname" type="text"></input required></td>
-				</tr>
-				<tr>
-					<td class="title">Job title: </td>
-					<td><input required name="title" type="text"></input required></td>
 				</tr>
 				<tr>
 					<td class="title">Office location: </td>
@@ -97,14 +85,23 @@
 					<td class="title">Computer model: </td>
 					<td><input required name="computer" type="text"></input required></td>
 				</tr>
+				<tr>
+					<td class="title">Windows: </td>
+					<td>
+						<select required name="windows">
+							<option value="10">Windows 10</option>
+							<option value="11">Windows 11</option>
+						</select>
+					</td>
+				</tr>
 			</table>
 			<table>
 				<tr>
-					<td><input class="buttons" type="submit"></td>
-					<td><input class="buttons" type="reset"></td>
+					<td><input type="submit"></td>
+					<td><input type="reset"></td>
 				</tr>
 			</table>
-			<input type="hidden" name="filename" value="NH">
+			<input type="hidden" name="filename" value="UP">
 		</form>
 		<div class="home">
 			<a href="..\index.html">Return to home</a>

@@ -40,7 +40,7 @@
 	</head>
 
 	<body>
-		<a class="header" href="..\index.html">Return to home</a>
+		<a class="header" href="../index.html">Return to home</a>
 		<h1 align="center">Upgrades/Rebuilds List</h1>
 		<hr>
 		<table>
@@ -58,7 +58,7 @@
 				<td width="5%">QC</td>
 				<td width="5%"></td>
 			</tr>
-			<form action="..\PHP\singleUpgrade.php" method="post">
+			<form action="../Entry Update/singleUpgrade.php" method="post">
 				<?php
 					$servername = "localhost";
 					$username = "root";

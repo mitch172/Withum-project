@@ -40,7 +40,7 @@
 	</head>
 
 	<body>
-		<a class="header" href="..\index.html">Return to home</a>
+		<a class="header" href="../index.html">Return to home</a>
 		<h1 align="center">New Hires List</h1>
 		<hr>
 		<table>
@@ -58,7 +58,7 @@
 				<td width="5%">QC</td>
 				<td width="5%"></td>
 			</tr>
-			<form action="..\PHP\singleNewHire.php" method="post">
+			<form action="../Entry Update/singleNewHire.php" method="post">
 				<?php
 					$servername = "localhost";
 					$username = "root";
